@@ -24,10 +24,11 @@ bad_channels_map = {
 # Configuration
 RANDOM_STATE = 715
 TASK_NAME = "Simon"
-
-# Final analysis filter:
-# For ERP-focused analyses, use something like 0.1-40 Hz
-# For theta/time-frequency analyses, 1-40 or 1-45 can be OK
+'''
+    Final analysis filter:
+    For ERP-focused analyses, using something like 0.1-40 Hz is reasonable.
+    For theta/time-frequency analyses, 1-40 or 1-45 can be Okay here.
+'''
 FINAL_L_FREQ = 0.1
 FINAL_H_FREQ = 40.0
 
@@ -44,9 +45,7 @@ NON_EEG_TO_DROP = ["I1", "I2", "Resp"]
 # Optional: skip subjects if output already exists
 SKIP_IF_EXISTS = False
 
-# =========================
 # Helper functions
-# =========================
 def safe_set_montage(raw):
     """Attach standard montage safely."""
     montage = mne.channels.make_standard_montage("standard_1020")
@@ -200,9 +199,7 @@ def preprocess_final_raw(raw, ica, subject):
     return raw_final
 
 
-# =========================
 # Main loop
-# =========================
 for subject in subjects:
     print(f"\nProcessing {subject} ...")
 
