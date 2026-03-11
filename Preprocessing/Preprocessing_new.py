@@ -21,9 +21,7 @@ bad_channels_map = {
     "sub-002": ["TP10"],
 }
 
-# =========================
 # Configuration
-# =========================
 RANDOM_STATE = 715
 TASK_NAME = "Simon"
 
